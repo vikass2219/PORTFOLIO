@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website - Vikas Babu</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH2aVL1TVLCi8uEvkK+ueXv3IIMfM2pYqqdDDw5AX6NnqZ8MiHbKPYRxqGm5znSR/5ewWyU1KibCHyLjzVnVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://kit.fontawesome.com/59acce03a0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css" /> 
+    
+    <style>
+        /* General icon styling */
+        i {
+            font-size: 40px;
+            color: black;
+        }
+
+        /* Additional styles that might be in your style.css or needed here */
+        .fas { 
+            font-size: 25px; 
+            color: #fff; 
+            cursor: pointer;
+        }
+
+        .fa-bars {
+            display: block; 
+        }
+        
+        .fa-square-xmark {
+            display: block; 
+            position: absolute; 
+            top: 25px;
+            left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="pics/logo.png" class="logo" alt="Vikas Babu Logo" />
+
+                <i class="fa-solid fa-bars fas" onclick="openMenu()"></i>
+
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-square-xmark fas" onclick="closeMenu()"></i>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text">
+                <p>Python Developer</p>
+                <h1>Hi, I'm <span>Vikas Babu</span><br> From Bareilly</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pics/Profile.jpg" alt="Vikas Babu Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Vikas Babu, a passionate and detail-oriented Python developer with a strong foundation in programming, backend development, and data handling. I have hands-on experience with frameworks like Django and Flask, and I enjoy building web applications, REST APIs, and automation scripts. 
+                        I’m familiar with tools such as Git, MySQL, SQLite, Pandas, and NumPy, and I continuously work on improving my skills in software development and problem-solving. I have completed several academic and personal projects that reflect my ability to write clean, efficient, and scalable code.
+                        I am eager to work in a collaborative environment where I can apply my knowledge, learn from industry professionals, and contribute to real-world software solutions.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Web Interface</li>
+                            <li><span>Competitive Programming</span><br>Python</li>
+                            <li><span>Data Structure And Algorithm</span><br>knowledge of essential data Structure such as arrays, linked list, stack, queue, tree, and graphs.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2025</span><br>Bachelor of Engineering In Computer Science From Chandigarh University</li>
+                            <li><span>2021</span><br>Intermediate from Shri Lalta Prasad Saraswati Vidhya Mandir Inter College Nawabganj, Bareilly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="serviceslist">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Data Analysis And Visualization</h2>
+                    <p>I offer data analysis services using Pandas, NumPy, and Matplotlib/Seaborn to uncover insights and help make data-driven decisions.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Machine Learning Models</h2>
+                    <p>I design and train ML models using Scikit-learn or TensorFlow for classification, regression, and clustering tasks based on your business needs.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-comment"></i>
+                    <h2>Chatbot Development</h2>
+                    <p>I create smart and responsive chatbots using Python, NLP, and frameworks like Rasa or integrating with Telegram, WhatsApp, and web interfaces.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file"></i>
+                    <h2>Portfolio & Resume Builder Tools</h2>
+                    <p>I can also build Python-powered web tools (like resume builders or personal dashboards) tailored to developers or job seekers.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="pics/work1.png" alt="Sentiment Analyzer Project">
+                    <div class="layer">
+                        <h3>Sentiment Analyzer</h3>
+                        <p>This project involves building a sentiment analysis system that classifies text into positive, negative, or neutral sentiments using Natural Language Processing (NLP).</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="pics/work2.png" alt="Chatbot Project">
+                    <div class="layer">
+                        <h3>Chatbot</h3>
+                        <p>Developed a smart and interactive chatbot using Python and Natural Language Processing (NLP). It supports greetings, FAQs, and dynamic replies.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> vikaskurmi1431@gmail.com</p>
+                    <p><i class="fa-solid fa-mobile-button"></i> 9458766445</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/vikass2219" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="https://www.instagram.com/vikas_kurmi_up_25/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vikas-babu-542009236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="pics/resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        <span id="msg"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Vikas. All Right Reserved.<i class="fa-solid fa-heart" style="color: #ff0000;"></i></p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        let sidemenu = document.getElementById("sidemenu");
+
+        function openMenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbznmGNbgFIrpfHmQE9NfuFHHwKtKDCRdsXn9gFkAKGOzZ78JbFIQPSCnGimybhj27oBJw/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        msg.innerHTML = "✅ Message sent successfully!";
+        msg.style.color = "green";
+
+        setTimeout(() => {
+          msg.innerHTML = "";
+        }, 5000);
+
+        form.reset();
+      })
+      .catch(error => {
+        msg.innerHTML = "❌ Error sending message!";
+        msg.style.color = "red";
+
+        setTimeout(() => {
+          msg.innerHTML = "";
+        }, 5000);
+      });
+  });
+</script>
+
+
+</body>
+</html>
